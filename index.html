@@ -8,7 +8,7 @@
   <style>
     body {
       margin: 0;
-      font-family: Comic Sans MS, Impact, Arial, sans-serif;
+      font-family: 'Comic Sans MS', Impact, Arial, sans-serif;
       background: linear-gradient(135deg, #0038a8, #ce1126, #fcd116);
       color: white;
       text-align: center;
@@ -32,16 +32,13 @@
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.5);
       text-align: center;
-      width: 300px;
-    }
-
-    .gate-box h2 {
-      margin-bottom: 20px;
+      width: 320px;
     }
 
     .gate-buttons {
       position: relative;
-      height: 80px;
+      height: 100px;
+      margin-top: 20px;
     }
 
     button {
@@ -55,20 +52,18 @@
     .yes {
       background: #28a745;
       color: white;
-      margin-right: 20px;
     }
 
     .no {
       background: #dc3545;
       color: white;
       position: absolute;
-      left: 150px;
-      top: 0;
+      left: 180px;
+      transition: all 0.2s ease;
+      user-select: none;
     }
 
-    .hidden {
-      display: none;
-    }
+    .hidden { display: none; }
 
     h1 {
       font-size: 3rem;
@@ -83,10 +78,7 @@
       text-shadow: 2px 2px black;
     }
 
-    .flags {
-      font-size: 3rem;
-      margin: 20px 0;
-    }
+    .flags { font-size: 3rem; margin: 20px 0; }
 
     .doge {
       width: 250px;
@@ -184,7 +176,7 @@
   </div>
 
   <h1>🎉 HAPPY BIRTHDAY 🎉</h1>
-  <h2>Happy Birthday(bamkhrawmborlymgdohnomgbri), my(siddharthdeyms) sweet little good boy  🇵🇭🔥</h2>
+  <h2>Happy Birthday, my sweet little good boy 🇵🇭🔥</h2>
 
   <div class="flags">🇵🇭 🇵🇭 🇵🇭 🇵🇭 🇵🇭</div>
 
@@ -207,23 +199,27 @@
   </audio>
 
   <script>
-    const no = document.getElementById("no")
+    const no = document.getElementById("no");
+    const container = document.querySelector(".gate-buttons");
 
     no.addEventListener("mouseover", () => {
-      const x = Math.random() * 200
-      const y = Math.random() * 60
-      no.style.left = x + "px"
-      no.style.top = y + "px"
-    })
+      const maxX = container.offsetWidth - no.offsetWidth;
+      const maxY = container.offsetHeight - no.offsetHeight;
+
+      const x = Math.floor(Math.random() * maxX);
+      const y = Math.floor(Math.random() * maxY);
+
+      no.style.left = x + "px";
+      no.style.top = y + "px";
+    });
 
     function enter() {
-      document.getElementById("gate").classList.add("hidden")
-      const music = document.getElementById("bgm")
-      music.volume = 0.6
-      music.play()
+      document.getElementById("gate").classList.add("hidden");
+      const music = document.getElementById("bgm");
+      music.volume = 0.6;
+      music.play().catch(() => {});
     }
   </script>
-
 
 </body>
 </html>
