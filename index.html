@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Happy Birthday pinoy godz🎉</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', Impact, Arial, sans-serif;
+      background: linear-gradient(135deg, #0038a8, #ce1126, #fcd116);
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    .gate {
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(135deg, #000428, #004e92);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .gate-box {
+      background: white;
+      color: black;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      text-align: center;
+      width: 85%;
+      max-width: 320px;
+    }
+
+    .gate-buttons {
+      position: relative;
+      height: 120px;
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      touch-action: manipulation;
+    }
+
+    .yes {
+      background: #28a745;
+      color: white;
+      z-index: 1;
+    }
+
+    .no {
+      background: #dc3545;
+      color: white;
+      position: absolute;
+      right: 20px;
+      transition: all 0.2s ease;
+      user-select: none;
+      white-space: nowrap;
+    }
+
+    .hidden { display: none; }
+
+    h1 {
+      font-size: 2.2rem;
+      margin: 20px 10px;
+      text-shadow: 2px 2px black;
+      animation: bounce 1.5s infinite;
+    }
+
+    h2 {
+      margin: 15px;
+      font-size: 1.4rem;
+      text-shadow: 2px 2px black;
+    }
+
+    .flags { font-size: 2.5rem; margin: 15px 0; }
+
+    .doge {
+      width: 200px;
+      max-width: 70%;
+      border-radius: 20px;
+      box-shadow: 0 0 20px gold;
+      animation: spin 10s linear infinite;
+    }
+
+    .meme-text {
+      position: relative;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: yellow;
+      text-shadow: 2px 2px black;
+      margin: 10px 0;
+      display: block;
+    }
+
+    .dialog {
+      position: relative;
+      max-width: 80%;
+      margin: 15px auto;
+      background: white;
+      color: black;
+      border-radius: 20px;
+      padding: 12px;
+      font-size: 1rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .bomb {
+      font-size: 2rem;
+      margin: 30px 0;
+      animation: shake 0.2s infinite;
+    }
+
+    footer {
+      padding: 40px 10px 20px;
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    @media (min-width: 600px) {
+      h1 { font-size: 3.5rem; }
+      h2 { font-size: 2rem; }
+      .meme-text { position: absolute; font-size: 1.8rem; }
+      .meme1 { top: 20%; left: 5%; }
+      .meme2 { top: 45%; right: 5%; }
+      .meme3 { bottom: 15%; left: 10%; }
+      .dialog { position: absolute; max-width: 260px; }
+      .d1 { top: 60%; left: 5%; }
+      .d2 { top: 65%; right: 5%; }
+      .d3 { top: 30%; right: 15%; }
+      .doge { width: 250px; }
+    }
+
+    @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    @keyframes shake { 0% { transform: translateX(0); } 25% { transform: translateX(-3px); } 50% { transform: translateX(3px); } 75% { transform: translateX(-3px); } 100% { transform: translateX(0); } }
+    @keyframes float { 0% { transform: translateY(0); } 50% { transform: translateY(-8px); } 100% { transform: translateY(0); } }
+  </style>
+</head>
+<body>
+
+  <div class="gate" id="gate">
+    <div class="gate-box">
+      <h2>Are you sids sweet little good boy?</h2>
+      <div class="gate-buttons">
+        <button class="yes" onclick="enter()">Yes</button>
+        <button class="no" id="no">No</button>
+      </div>
+    </div>
+  </div>
+
+  <h1>🎉 HAPPY BIRTHDAY 🎉</h1>
+  <h2>Happy Birthday, my(simd's) sweet little good boy(bambam) 🇵🇭🔥</h2>
+
+  <div class="flags">🇵🇭 🇵🇭 🇵🇭 🇵🇭 🇵🇭</div>
+
+  <img class="doge" src="https://upload.wikimedia.org/wikipedia/en/5/5f/Original_Doge_meme.jpg">
+
+  <div class="meme-text meme1">wow. very birthday.</div>
+  <div class="meme-text meme2">such filipino. much legend.</div>
+  <div class="meme-text meme3">many years. very pog.</div>
+
+  <div class="dialog d1">omg is birthday??? 🇵🇭🎉</div>
+  <div class="dialog d2">certified pinoy moment 💯🔥</div>
+  <div class="dialog d3">bepis and conke tiem</div>
+
+  <div class="bomb">💣 MI BOMBO 💣</div>
+
+  <footer>Manifesting a bengali wife for you this time 🇵🇭</footer>
+
+  <audio id="bgm" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    const no = document.getElementById("no");
+    const container = document.querySelector(".gate-buttons");
+
+    const moveButton = () => {
+      const maxX = container.offsetWidth - no.offsetWidth;
+      const maxY = container.offsetHeight - no.offsetHeight;
+      const x = Math.floor(Math.random() * maxX);
+      const y = Math.floor(Math.random() * maxY);
+      no.style.left = x + "px";
+      no.style.top = y + "px";
+    };
+
+    no.addEventListener("mouseover", moveButton);
+    no.addEventListener("touchstart", (e) => {
+      e.preventDefault();
+      moveButton();
+    });
+
+    function enter() {
+      document.getElementById("gate").classList.add("hidden");
+      const music = document.getElementById("bgm");
+      music.volume = 0.6;
+      music.play().catch(() => {});
+    }
+  </script>
+
+</body>
+</html>
